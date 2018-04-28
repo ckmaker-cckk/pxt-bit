@@ -1,0 +1,16 @@
+{
+	"ikbit.keyClick|block":"BIT-KEY 按键点击|%key",
+	"ikbit.keyLongClick|block": "BIT-KEY 按键长点击|%key:",
+	"ikbit.keyLongHold|block":"BIT-KEY 按键长按保持|%key",
+
+	"ikbit.lcd1602ClearScreen|block":"BIT-LCD1602 清屏",
+	"ikbit.lcd1602SetBackLight|block":"BIT-LCD1602 设置背光亮度|%value",
+	"ikbit.lcd1602DisString|block":"BIT-LCD1602 显示字符串|X|%x |y|%y |%str",
+	"ikbit.lcd1602DisNumber|block":"BIT-LCD1602 显示数字|X|%x |y|%y |value|%num",
+	"ikbit.lcd1602ScrollDisString|block":"BIT-LCD1602 滚动显示字符串|X|%x |y|%y |%str",
+	"ikbit.lcd1602ScrollDisNumber|block":"BIT-LCD1602 滚动显示数字|X|%x |y|%y |value|%num",
+
+	"ikbit.wsgGetTem|block":"BIT-温湿光 获取温度值",
+	"ikbit.wsgGetDam|block":"BIT-温湿光 获取湿度值",
+	"ikbit.wsgGetLight|block":"BIT-温湿光 获取光强度值"
+}
