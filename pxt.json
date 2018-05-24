@@ -14,7 +14,8 @@
         "ikbit.ts",
         "bit-smg.ts",
         "bit-yaogan.ts",
-        "bit-keyboard.ts"
+        "bit-keyboard.ts",
+        "bit-lcd5110.ts"
     ],
     "testFiles": [
         "test.ts"
