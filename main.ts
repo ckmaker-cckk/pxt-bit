@@ -278,7 +278,7 @@ namespace ikbit {
     }
     //%block
     export function yaoganGetValue(xy: yaoganEnum): number {
-        return ikbit.readReg8(BIT_YAOGAN_ADD, xy);
+        return readReg8(BIT_YAOGAN_ADD, xy);
     }
     //%block
     export function smgDisNumber(num: number) {
@@ -286,7 +286,7 @@ namespace ikbit {
         let size = tnum.length;
         if (size > 4) size = 4;
         let tbuf=pins.createBuffer(size);
-        ikbit.copyStrToBuf(tnum,tbuf, 0, 4);        
-        ikbit.writeRegBuf(BIT_SMG_ADD,REG_SMG_NORMAL_DIS_DATA,tbuf);
+        copyStrToBuf(tnum,tbuf, 0, 4);        
+        writeRegBuf(BIT_SMG_ADD,REG_SMG_NORMAL_DIS_DATA,tbuf);
     }
 }
