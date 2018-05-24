@@ -10,7 +10,8 @@
     "files": [
         "README.md",
         "main.ts",
-        "_locales/zh/ikbit-strings.json"
+        "_locales/zh/ikbit-strings.json",
+        "ikbit.ts"
     ],
     "testFiles": [
         "test.ts"
