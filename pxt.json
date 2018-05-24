@@ -13,7 +13,8 @@
         "_locales/zh/ikbit-strings.json",
         "ikbit.ts",
         "bit-smg.ts",
-        "bit-yaogan.ts"
+        "bit-yaogan.ts",
+        "bit-keyboard.ts"
     ],
     "testFiles": [
         "test.ts"
