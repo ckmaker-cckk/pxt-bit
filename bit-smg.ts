@@ -21,7 +21,54 @@ namespace ikbit {
         let size = tnum.length;
         if (size > 4) size = 4;
         let tbuf=pins.createBuffer(size);
-        copyStrToBuf(tnum,tbuf, 0, 4);        
+        copyStrToBuf(tnum,tbuf, 0,size);        
         writeRegBuf(BIT_SMG_ADD,REG_SMG_NORMAL_DIS_DATA,tbuf);
     }
+    //% block
+    export function smgRollDisNumber(num: number) { 
+        let tnum=num.toString();
+        let size = tnum.length;
+        if (size > 10) size = 10;
+        let tbuf=pins.createBuffer(size);
+        copyStrToBuf(tnum,tbuf, 0, size);        
+        writeRegBuf(BIT_SMG_ADD,REG_SMG_ROLL_DIS_DATA,tbuf);        
+    }
+    //% block
+    export function smgSetLighteness(level: number) { 
+        let tbuf = pins.createBuffer(1);
+        tbuf[0] = level;
+        writeRegBufNoLength(BIT_SMG_ADD,REG_SMG_LIGHTENESS,tbuf);
+    }
+    //% block
+    export function smgsetOneBitNumber(s: number, d: number): void{
+        if (s > 10) return ;
+        let tbuf = pins.createBuffer(2);
+        tbuf[0] = s;
+        tbuf[1] = d;
+        writeRegBufNoLength(BIT_SMG_ADD,REG_SMG_ONEBIT_NUMBER,tbuf);        
+    }
+    //% block
+    export function smgsetOneBitCode(s: number, d: number): void{
+        if (s > 10) return ;
+        let tbuf = pins.createBuffer(2);
+        tbuf[0] = s;
+        tbuf[1] = d;
+        writeRegBufNoLength(BIT_SMG_ADD,REG_SMG_ONEBIT_CODE,tbuf);        
+    }
+    //% block
+    export function smgSetBlinkOneBit(s: number) { 
+        if (s > 4) return;
+        let tbuf = pins.createBuffer(1);
+        tbuf[0] = s;
+        writeRegBufNoLength(BIT_SMG_ADD,REG_SMG_ONEBIT_BLINK,tbuf); 
+    }
+    //% block
+    export function smgClearBlink(): void { 
+        writeReg(BIT_SMG_ADD,REG_SMG_CLEAR_BLINK);
+    }
+    //% block
+    export function smgClearDisplay(): void { 
+        writeReg(BIT_SMG_ADD,REG_SMG_CLEAR_DISPLAY);    
+    }
+    
 }
