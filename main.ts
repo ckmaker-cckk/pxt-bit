@@ -29,33 +29,6 @@ namespace ikbit {
 
     const BIT_WSG_ADD = 0X03;
 
-
-
-    const BIT_YAOGAN_ADD = 0X06;
-    const REG_YG_X = 0X30;
-    const REG_YG_Y = 0X31;
-
-    const BIT_SMG_ADD = 0X07;
-    const REG_SMG_DIS_MODE = 0X30;
-    const REG_SMG_NORMAL_DIS_DATA = 0X31;
-    const REG_SMG_ROLL_DIS_DATA = 0X32;
-    const REG_SMG_LIGHTENESS = 0X33;
-    const REG_SMG_ONEBIT_NUMBER = 0X34;
-    const REG_SMG_ONEBIT_CODE = 0X35;
-    const REG_SMG_ONEBIT_BLINK = 0X36;
-    const REG_SMG_CLEAR_BLINK = 0X37;
-    const REG_SMG_CLEAR_DISPLAY = 0X38;
-
-
-
-    export enum yaoganEnum {
-        //% block="YAOGAN_X"
-        YAOGAN_X = REG_YG_X,
-        //% block="YAOGAN_Y"
-        YAOGAN_Y = REG_YG_Y
-    }
-
-
     export enum ikbitKeyEnum {
         //% block="KEYA"
         KEYA = 1,
@@ -276,17 +249,5 @@ namespace ikbit {
         light = pins.i2cReadNumber(3, NumberFormat.Int8LE);
         return light;
     }
-    //%block
-    export function yaoganGetValue(xy: yaoganEnum): number {
-        return readReg8(BIT_YAOGAN_ADD, xy);
-    }
-    //%block
-    export function smgDisNumber(num: number) {
-        let tnum=num.toString();
-        let size = tnum.length;
-        if (size > 4) size = 4;
-        let tbuf=pins.createBuffer(size);
-        copyStrToBuf(tnum,tbuf, 0, 4);        
-        writeRegBuf(BIT_SMG_ADD,REG_SMG_NORMAL_DIS_DATA,tbuf);
-    }
+
 }

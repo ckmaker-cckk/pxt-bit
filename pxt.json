@@ -11,7 +11,9 @@
         "README.md",
         "main.ts",
         "_locales/zh/ikbit-strings.json",
-        "ikbit.ts"
+        "ikbit.ts",
+        "bit-smg.ts",
+        "bit-yaogan.ts"
     ],
     "testFiles": [
         "test.ts"
