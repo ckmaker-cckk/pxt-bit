@@ -99,7 +99,8 @@ namespace bitLcd5110 {
         if (ballsize > 40) ballsize = 40;
         else if (ballsize < 1) ballsize = 1;
         tbuf[0] = ballsize;
-        ikbit.writeRegBufNoLength(BIT_LCD5110_ADD,REG_5110_GAME1,tbuf);
+        ikbit.writeRegBufNoLength(BIT_LCD5110_ADD, REG_5110_GAME1, tbuf);
+        basic.pause(60);
     }
     /**
       * BIT-LCD5110 enter game2 mode 
@@ -113,7 +114,8 @@ namespace bitLcd5110 {
         if (level > 5) level = 5;
         else if (level < 1) level = 1;
         tbuf[0] = level;
-        ikbit.writeRegBufNoLength(BIT_LCD5110_ADD,REG_5110_GAME2,tbuf);
+        ikbit.writeRegBufNoLength(BIT_LCD5110_ADD, REG_5110_GAME2, tbuf);
+        basic.pause(60);
     }
     /**
       * BIT-LCD5110 enter game3 mode 
@@ -127,7 +129,8 @@ namespace bitLcd5110 {
         if (level > 3) level = 3;
         else if (level < 1) level = 1;
         tbuf[0] = level;
-        ikbit.writeRegBufNoLength(BIT_LCD5110_ADD,REG_5110_GAME3,tbuf);
+        ikbit.writeRegBufNoLength(BIT_LCD5110_ADD, REG_5110_GAME3, tbuf);
+        basic.pause(60);
     }
 
 
@@ -157,7 +160,8 @@ namespace bitLcd5110 {
         let tsize = str.length;
         let tbuf = pins.createBuffer(tsize);
         ikbit.copyStrToBuf(str, tbuf, 0, tsize);
-        ikbit.writeRegBuf(BIT_LCD5110_ADD,REG_5110_MENU_ADD_ITEM,tbuf);
+        ikbit.writeRegBuf(BIT_LCD5110_ADD, REG_5110_MENU_ADD_ITEM, tbuf);
+        basic.pause(60);
     }
     //%blockId=lcd5110MenuCheckNowItem block="BIT-LCD5110 MenuCheckNowItem"
     //% weight=168 blockGap=3 color=#9B30FF
@@ -186,12 +190,14 @@ namespace bitLcd5110 {
     //%blockId=lcd5110DisVersionMode block="BIT-LCD5110 VersionMode"
     //% weight=159 blockGap=3 color=#00CED1
     export function lcd5110DisVersionMode(): void { 
-        ikbit.writeReg(BIT_LCD5110_ADD,REG_5110_SOFT_VER);
+        ikbit.writeReg(BIT_LCD5110_ADD, REG_5110_SOFT_VER);
+        basic.pause(60);
     }
     //%blockId=lcd5110ScreenSaverMode block="BIT-LCD5110 ScreenSaverMode"
     //% weight=158 blockGap=3 color=#00CED1
     export function lcd5110ScreenSaverMode(): void { 
-        ikbit.writeReg(BIT_LCD5110_ADD,REG_5110_SAVER);
+        ikbit.writeReg(BIT_LCD5110_ADD, REG_5110_SAVER);
+        basic.pause(60);
     }
     //%blockId=lcd5110BackLight block="BIT-LCD5110 BackLight|%light"
     //% weight=158 blockGap=30 color=#00CED1
@@ -206,7 +212,8 @@ namespace bitLcd5110 {
     //%blockId=lcd5110DisDrawMode block="BIT-LCD5110 DrawMode"
     //% weight=150 blockGap=3 color=#0000CD
     export function lcd5110DisDrawMode(): void { 
-        ikbit.writeReg(BIT_LCD5110_ADD,REG_5110_DRAW);
+        ikbit.writeReg(BIT_LCD5110_ADD, REG_5110_DRAW);
+        basic.pause(60);
     }
     //%blockId=lcd5110DrawPixel block="BIT-LCD5110 DrawPixel|x %x|y %y"
     //% weight=149 blockGap=3 color=#0000CD

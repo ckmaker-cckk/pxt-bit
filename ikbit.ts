@@ -15,6 +15,7 @@ namespace ikbit {
         tbuf[1] = size;
         tbuf.write(2, buf);
         pins.i2cWriteBuffer(add, tbuf);
+        basic.pause(1);
     }
     export function writeRegBufNoLength(add: number, reg: number, buf: Buffer): void {
         let size = buf.length;
@@ -22,12 +23,14 @@ namespace ikbit {
         tbuf[0] = reg;
         tbuf.write(1, buf);
         pins.i2cWriteBuffer(add, tbuf);
+        basic.pause(1);
     }
 
     export function readReg8(add: number, reg: number): number {
         let value: number;
         pins.i2cWriteNumber(add, reg, NumberFormat.Int8LE);
         value = pins.i2cReadNumber(add, NumberFormat.Int8LE);
+        basic.pause(1);
         return value;
     }
 
