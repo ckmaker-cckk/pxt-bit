@@ -13,7 +13,8 @@ namespace ikbit {
         //% block="YAOGAN_Y"
         YAOGAN_Y = REG_YG_Y
     }
-    //%block
+    //%blockId=yaoganGetValue block="BIT-YAOGAN GetValue|%xy"
+    //% weight=140 blockGap=30 color=#FFA500
     export function yaoganGetValue(xy: yaoganEnum): number {
         return readReg8(BIT_YAOGAN_ADD, xy);
     }
