@@ -178,7 +178,7 @@ namespace bitLcd5110 {
         ikbit.writeReg(BIT_LCD5110_ADD,REG_5110_SOFT_VER);
     }
     //%blockId=lcd5110ScreenSaverMode block="BIT-LCD5110 ScreenSaverMode"
-    //% weight=158 blockGap=30 color=#00CED1
+    //% weight=158 blockGap=3 color=#00CED1
     export function lcd5110ScreenSaverMode(): void { 
         ikbit.writeReg(BIT_LCD5110_ADD,REG_5110_SAVER);
     }
