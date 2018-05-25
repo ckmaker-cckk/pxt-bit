@@ -1,7 +1,7 @@
 /**
  * IKBIT PACKAGES
  */
-//% weight=1000 color=#436EEE icon="\uf1cb"
+//% weight=990 color=#436EEE icon="\uf1cb"
 namespace bitLcd5110 { 
     const BIT_LCD5110_ADD = 0X04;
     //模块特殊指令
