@@ -15,6 +15,7 @@
 	"ikbit.wsgGetLight|block":"BIT-温湿光 获取光强度值",
 
 	"ikbit.yaoganGetValue|block":"BIT-摇杆 获取数值|%xy",
+
 	"ikbit.smgDisNumber|block=":"BIT-数码管 显示数字|%num",
 	"ikbit.smgRollDisNumber|block":"BIT-数码管 滚动显示数字|%num",
 	"ikbit.smgSetLighteness|block":"BIT-数码管 设置亮度|%level",
@@ -29,9 +30,9 @@
 	"ikbit.keyBoardLongClickState|block":"BIT-矩阵键盘 按键长点击|%k",
 	"ikbit.keyBoardLongHoldState|block":"BIT-矩阵键盘 按键长按保持|%k",
 
-	"bitLcd5110.lcd5110DisGame1Mode|block":"BIT-LCD5110 游戏1模式",
-	"bitLcd5110.lcd5110DisGame2Mode|block":"BIT-LCD5110 游戏2模式",
-	"bitLcd5110.lcd5110DisGame3Mode|block":"BIT-LCD5110 游戏3模式",
+	"bitLcd5110.lcd5110DisGame1Mode|block":"BIT-LCD5110 游戏1模式|球大小%ballsize",
+	"bitLcd5110.lcd5110DisGame2Mode|block":"BIT-LCD5110 游戏2模式|难度等级%level",
+	"bitLcd5110.lcd5110DisGame3Mode|block":"BIT-LCD5110 游戏3模式|难度等级%level",
 	"bitLcd5110.lcd5110Cmd|block":"BIT-LCD5110 命令|%cmd",
 	"bitLcd5110.lcd5110CmdNumber|block":"BIT-LCD5110 数字命令|%num",
 	"bitLcd5110.lcd5110DisMenuMode|block":"BIT-LCD5110 菜单模式",

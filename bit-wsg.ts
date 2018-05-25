@@ -22,7 +22,7 @@ namespace ikbit {
      *  from BIT-WSG get dampness
      */
     //% blockId="wsgGetDam" block="BIT-WSG GetDampness"
-    //% weight=155 blockGap=3 color=#00BFFF
+    //% weight=159 blockGap=3 color=#00BFFF
     export function wsgGetDam(): number {
         return readReg8(BIT_WSG_ADD,REG_SHIDU);
     }
@@ -30,7 +30,7 @@ namespace ikbit {
      *  from BIT-WSG get luminosity
      */
     //% blockId="wsgGetLight" block="BIT-WSG GetLight"
-    //% weight=154 blockGap=30 color=#00BFFF
+    //% weight=158 blockGap=30 color=#00BFFF
     export function wsgGetLight(): number {
         return readReg8(BIT_WSG_ADD,REG_GUANGDU);
     }    

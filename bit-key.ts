@@ -34,7 +34,7 @@ namespace ikbit {
     }
 
     //%blockId=keyClick block="BIT-KEY Click|%key"
-    //% weight=200 blockGap=3 color=#FF3030
+    //% weight=180 blockGap=3 color=#FF3030
     export function keyClick(key: ikbitKeyEnum): boolean {
 
         if (readReg8(BIT_KEY_ADD, key + REG_KEYA_SHORT_CLICK))
@@ -42,14 +42,14 @@ namespace ikbit {
         else return false;
     }
     //%blockId=keyLongClick block="BIT-KEY LongClick|%key"
-    //% weight=195 blockGap=3 color=#FF3030
+    //% weight=179 blockGap=3 color=#FF3030
     export function keyLongClick(key: ikbitKeyEnum): boolean {
         if (readReg8(BIT_KEY_ADD, key + REG_KEYA_LONG_CLICK))
             return true;
         else return false;
     }
     //%blockId=keyLongHold block="BIT-KEY LongHold|%key"
-    //% weight=190 blockGap=20 color=#FF3030
+    //% weight=178 blockGap=30 color=#FF3030
     export function keyLongHold(key: ikbitKeyEnum): boolean {
         if (readReg8(BIT_KEY_ADD, key + REG_KEYA_LONG_HOLD))
             return true;
