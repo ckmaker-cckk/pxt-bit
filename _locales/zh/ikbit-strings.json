@@ -16,7 +16,7 @@
 
 	"ikbit.yaoganGetValue|block":"BIT-摇杆 获取数值|%xy",
 
-	"ikbit.smgDisNumber|block=":"BIT-数码管 显示数字|%num",
+	"ikbit.smgDisNumber|block":"BIT-数码管 显示数字|%num",
 	"ikbit.smgRollDisNumber|block":"BIT-数码管 滚动显示数字|%num",
 	"ikbit.smgSetLighteness|block":"BIT-数码管 设置亮度|%level",
 	"ikbit.smgSetOneBitNumber|block":"BIT-数码管 位显示数字|第%s位|%d",

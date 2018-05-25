@@ -87,7 +87,10 @@ namespace bitLcd5110 {
         //% block="BULE"
         BACKLIGHT_BLUE = 0X02,
     }
-
+    /**
+      *  
+      * @param ballsize set ball size, eg: "5"
+      */
     //%blockId=lcd5110DisGame1Mode block="BIT-LCD5110 Game1Mode|ballsize|%ballsize"
     //% weight=195 blockGap=3 color=#FF4500
     //%ballsize.min=1 ballsize.max=40
@@ -98,6 +101,10 @@ namespace bitLcd5110 {
         tbuf[0] = ballsize;
         ikbit.writeRegBufNoLength(BIT_LCD5110_ADD,REG_5110_GAME1,tbuf);
     }
+    /**
+      *  
+      * @param level set game level, eg: "1"
+      */
     //%blockId=lcd5110DisGame2Mode block="BIT-LCD5110 Game2Mode|level %level"
     //% weight=194 blockGap=3 color=#FF4500
     //% level.min=1 level.max=5
@@ -108,6 +115,10 @@ namespace bitLcd5110 {
         tbuf[0] = level;
         ikbit.writeRegBufNoLength(BIT_LCD5110_ADD,REG_5110_GAME2,tbuf);
     }
+    /**
+      *  
+      * @param level set game level, eg: "1"
+      */
     //%blockId=lcd5110DisGame3Mode block="BIT-LCD5110 Game3Mode|level %level"
     //% weight=193 blockGap=30 color=#FF4500
     //% level.min=1 level.max=3
