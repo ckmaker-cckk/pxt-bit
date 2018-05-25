@@ -98,7 +98,7 @@ namespace bitLcd5110 {
         tbuf[0] = ballsize;
         ikbit.writeRegBufNoLength(BIT_LCD5110_ADD,REG_5110_GAME1,tbuf);
     }
-    //%blockId=lcd5110DisGame2Mode block="BIT-LCD5110 Game2Mode|level|%level"
+    //%blockId=lcd5110DisGame2Mode block="BIT-LCD5110 Game2Mode|level %level"
     //% weight=194 blockGap=3 color=#FF4500
     //% level.min=1 level.max=5
     export function lcd5110DisGame2Mode(level: number): void { 
@@ -108,7 +108,7 @@ namespace bitLcd5110 {
         tbuf[0] = level;
         ikbit.writeRegBufNoLength(BIT_LCD5110_ADD,REG_5110_GAME2,tbuf);
     }
-    //%blockId=lcd5110DisGame3Mode block="BIT-LCD5110 Game3Mode|level|%level"
+    //%blockId=lcd5110DisGame3Mode block="BIT-LCD5110 Game3Mode|level %level"
     //% weight=193 blockGap=30 color=#FF4500
     //% level.min=1 level.max=3
     export function lcd5110DisGame3Mode(level: number): void { 
@@ -120,7 +120,7 @@ namespace bitLcd5110 {
     }
 
 
-    //%blockId=lcd5110Cmd block="BIT-LCD5110 Cmd|%cmdEnum"
+    //%blockId=lcd5110Cmd block="BIT-LCD5110 Cmd|%cmd"
     //% weight=180 blockGap=3 color=#008B8B
     export function lcd5110Cmd(cmd:cmdEnum): void { 
         ikbit.writeReg(BIT_LCD5110_ADD,cmd);
