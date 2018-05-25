@@ -17,7 +17,8 @@
         "bit-keyboard.ts",
         "bit-lcd5110.ts",
         "bit-lcd1602.ts",
-        "bit-wsg.ts"
+        "bit-wsg.ts",
+        "bit-key.ts"
     ],
     "testFiles": [
         "test.ts"

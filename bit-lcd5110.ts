@@ -326,22 +326,23 @@ namespace bitLcd5110 {
         tbuf[4] = r;    
         ikbit.writeRegBufNoLength(BIT_LCD5110_ADD,REG_5110_ROUND_RECT,tbuf);
     }
-    //%blockId=lcd5110Print block="BIT-LCD5110 Print|str %str"
+    //%blockId=lcd5110SetCursor block="BIT-LCD5110 SetCursor|x %x|y %y"
     //% weight=136 blockGap=3 color=#0000CD
+    export function lcd5110SetCursor(x: number, y: number): void { 
+        let tbuf = pins.createBuffer(2);
+        tbuf[0]=x;
+        tbuf[1]=y;  
+        ikbit.writeRegBufNoLength(BIT_LCD5110_ADD,REG_5110_SET_CURSOR,tbuf);
+    }    
+    //%blockId=lcd5110Print block="BIT-LCD5110 Print|str %str"
+    //% weight=135 blockGap=3 color=#0000CD
     export function lcd5110Print(str: string): void { 
         let size = str.length;
         let tbuf = pins.createBuffer(size);
         ikbit.copyStrToBuf(str, tbuf, 0, size);
         ikbit.writeRegBuf(BIT_LCD5110_ADD,REG_5110_PRINT,tbuf);
     }
-    //%blockId=lcd5110SetCursor block="BIT-LCD5110 SetCursor|x %x|y %y"
-    //% weight=135 blockGap=3 color=#0000CD
-    export function lcd5110SetCursor(x: number, y: number): void { 
-        let tbuf = pins.createBuffer(2);
-        tbuf[0]=x;
-        tbuf[1]=y;  
-        ikbit.writeRegBufNoLength(BIT_LCD5110_ADD,REG_5110_SET_CURSOR,tbuf);
-    }
+
     //%blockId=lcd5110Println block="BIT-LCD5110 Println|str %str"
     //% weight=134 blockGap=3 color=#0000CD
     export function lcd5110Println(str: string): void { 

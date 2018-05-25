@@ -16,7 +16,7 @@ namespace ikbit {
      *  clear BIT-LCD1602 screen display
      */
     //% blockId=lcd1602ClearScreen block="BIT-LCD1602 ClearScreen"
-    //% weight=186 blockGap=3 color=#2E8B57
+    //% weight=190 blockGap=3 color=#2E8B57
     export function lcd1602ClearScreen(): void {
         writeReg(BIT_LCD1602_ADD,REG_1602_CLEAR_SCREEN);
     }
@@ -26,7 +26,7 @@ namespace ikbit {
      */
     //% blockId=lcd1602SetBackLight block="BIT-LCD1602 SetBackLight|%value "
     //% value.min=0 value.max=5
-    //% weight=185 blockGap=3 color=#2E8B57
+    //% weight=189 blockGap=3 color=#2E8B57
     export function lcd1602SetBackLight(value: number): void {
         if (value < 0 || value > 5) { return; }
         let buf = pins.createBuffer(1);
@@ -41,7 +41,7 @@ namespace ikbit {
     //% blockId=lcd1602DisString  block="BIT-LCD1602 DisString|X %x |y %y |%str"
     //% x.min=1  x.max=2
     //% y.min=1  y.max=16
-    //% weight=180 blockGap=3 color=#2E8B57
+    //% weight=188 blockGap=3 color=#2E8B57
     export function lcd1602DisString(x: number, y: number, str: string): void {
         if (y > 16) return;
         let size = str.length;
@@ -66,7 +66,7 @@ namespace ikbit {
     //% blockId=ikbit_lcd1602DisNumber  block="BIT-LCD1602 display number|X|%x |y|%y |value|%num"
     //% x.min=1  x.max=2
     //% y.min=1  y.max=16
-    //% weight=175 blockGap=30 color=#2E8B57
+    //% weight=187 blockGap=3 color=#2E8B57
     export function lcd1602DisNumber(x: number, y: number, n: number): void {
         let str=n.toString();
         lcd1602DisString(x,y,str);
@@ -79,8 +79,7 @@ namespace ikbit {
     //% blockId=ikbit_lcd1602ScrollDisString block="BIT-LCD1602 scroll display string|X|%x |y|%y |%str"
     //% x.min=1  x.max=2
     //% y.min=1  y.max=16
-    //% advanced=true
-    //% weight=170 blockGap=3 color=#2E8B57
+    //% weight=186 blockGap=3 color=#2E8B57
     export function lcd1602ScrollDisString(x: number, y: number, str: string): void {
         let size=str.length;
         if (size > 16) size = 16;
@@ -105,8 +104,7 @@ namespace ikbit {
     //% blockId=ikbit_lcd1602ScrollDisNumber  block="BIT-LCD1602 scroll display number|X|%x |y|%y |value|%num"
     //% x.min=1  x.max=2
     //% y.min=1  y.max=16
-    //% advanced=true
-    //% weight=165 blockGap=30 color=#2E8B57
+    //% weight=185 blockGap=30 color=#2E8B57
     export function lcd1602ScrollDisNumber(x: number, y: number, n: number): void {
         let str=n.toString();
         lcd1602ScrollDisString(x,y,str);
