@@ -48,20 +48,20 @@ namespace ikbit {
     export function keyBoardClickState(k: keyBoardEnum) :boolean{ 
         let value = readReg8(BIT_KEYBOARD_ADD, REG_KB_SHORT_RELEASE_BASE + k);
         if (value) return true;
-        else return true;
+        else return false;
     }
     //%blockId=keyBoardLongClickState block="BIT-KEYBOARD LongClickState|%k"
     //% weight=129 blockGap=3 color=#BA55D3
     export function keyBoardLongClickState(k: keyBoardEnum) :boolean{ 
         let value = readReg8(BIT_KEYBOARD_ADD, REG_KB_LONG_RELEASE_BASE + k);
         if (value) return true;
-        else return true;
+        else return false;
     }
     //%blockId=keyBoardLongHoldState block="BIT-KEYBOARD LongHoldState|%k"
     //% weight=128 blockGap=30 color=#BA55D3
     export function keyBoardLongHoldState(k: keyBoardEnum) :boolean{ 
         let value = readReg8(BIT_KEYBOARD_ADD, REG_KB_LONG_HOLD_BASE + k);
         if (value) return true;
-        else return true;
+        else return false;
     }
 }

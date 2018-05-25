@@ -79,6 +79,14 @@ namespace bitLcd5110 {
         //% block="RETURN"
         RETURN = REG_5110_RETURN        
     }
+    export enum backLightEnum {
+        //% block="NONE"
+        BACKLIGHT_NONE = 0X00,
+        //% block="YELLOW"
+        BACKLIGHT_YELLO = 0X01,
+        //% block="BULE"
+        BACKLIGHT_BLUE = 0X02,
+    }
 
     //%blockId=lcd5110DisGame1Mode block="BIT-LCD5110 Game1Mode|ballsize|%ballsize"
     //% weight=195 blockGap=3 color=#FF4500
@@ -173,6 +181,13 @@ namespace bitLcd5110 {
     //% weight=158 blockGap=30 color=#00CED1
     export function lcd5110ScreenSaverMode(): void { 
         ikbit.writeReg(BIT_LCD5110_ADD,REG_5110_SAVER);
+    }
+    //%blockId=lcd5110BackLight block="BIT-LCD5110 BackLight|%light"
+    //% weight=158 blockGap=30 color=#00CED1
+    export function lcd5110BackLight(light:backLightEnum): void { 
+        let tbuf=pins.createBuffer(1);
+        tbuf[0] = light;
+        ikbit.writeRegBufNoLength(BIT_LCD5110_ADD,REG_5110_BACKLIGHT,tbuf);
     }
 
 
@@ -345,5 +360,6 @@ namespace bitLcd5110 {
         tbuf[3]=size;  
         ikbit.writeRegBufNoLength(BIT_LCD5110_ADD,REG_5110_DRAW_CHAR,tbuf);
     } 
+    
 
 }
