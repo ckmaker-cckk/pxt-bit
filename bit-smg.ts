@@ -16,7 +16,7 @@ namespace ikbit {
     const REG_SMG_CLEAR_DISPLAY = 0X38;  
 
     //%blockId=smgDisNumber block="BIT-SMG DisNumber|%num"
-    //% weight=140 blockGap=3 color=#0000FF
+    //% weight=110 blockGap=3 color=#0000FF
     export function smgDisNumber(num: number) {
         let tnum=num.toString();
         let size = tnum.length;
@@ -26,7 +26,7 @@ namespace ikbit {
         writeRegBuf(BIT_SMG_ADD,REG_SMG_NORMAL_DIS_DATA,tbuf);
     }
     //%blockId=smgRollDisNumber block="BIT-SMG RollDisNumber|%num"
-    //% weight=140 blockGap=3 color=#0000FF
+    //% weight=109 blockGap=3 color=#0000FF
     export function smgRollDisNumber(num: number) { 
         let tnum=num.toString();
         let size = tnum.length;
@@ -36,7 +36,7 @@ namespace ikbit {
         writeRegBuf(BIT_SMG_ADD,REG_SMG_ROLL_DIS_DATA,tbuf);        
     }
     //%blockId=smgSetLighteness block="BIT-SMG Lighteness|%level"
-    //% weight=140 blockGap=3 color=#0000FF
+    //% weight=108 blockGap=3 color=#0000FF
     //%level.min=0 level.max=3
     export function smgSetLighteness(level: number) { 
         let tbuf = pins.createBuffer(1);
@@ -44,7 +44,7 @@ namespace ikbit {
         writeRegBufNoLength(BIT_SMG_ADD,REG_SMG_LIGHTENESS,tbuf);
     }
     //%blockId=smgSetOneBitNumber block="BIT-SMG SetOneBitNumber|s %s|d %d"
-    //% weight=140 blockGap=3 color=#0000FF
+    //% weight=107 blockGap=3 color=#0000FF
     //% s.min=0 s.max=3
     export function smgSetOneBitNumber(s: number, d: number): void{
         if (s > 10) return ;
@@ -54,7 +54,7 @@ namespace ikbit {
         writeRegBufNoLength(BIT_SMG_ADD,REG_SMG_ONEBIT_NUMBER,tbuf);        
     }
     //%blockId=smgSetOneBitCode block="BIT-SMG SetOneBitCode|s %s|d %d"
-    //% weight=140 blockGap=3 color=#0000FF
+    //% weight=106 blockGap=3 color=#0000FF
     //% s.min=0 s.max=3
     export function smgSetOneBitCode(s: number, d: number): void{
         if (s > 10) return ;
@@ -64,7 +64,7 @@ namespace ikbit {
         writeRegBufNoLength(BIT_SMG_ADD,REG_SMG_ONEBIT_CODE,tbuf);        
     }
     //%blockId=smgSetBlinkOneBit block="BIT-SMG SetBlinkOneBit|%s"
-    //% weight=140 blockGap=3 color=#0000FF
+    //% weight=105 blockGap=3 color=#0000FF
     //% s.min=0 s.max=3
     export function smgSetBlinkOneBit(s: number) { 
         if (s > 4) return;
@@ -73,12 +73,12 @@ namespace ikbit {
         writeRegBufNoLength(BIT_SMG_ADD,REG_SMG_ONEBIT_BLINK,tbuf); 
     }
     //%blockId=smgClearBlink block="BIT-SMG ClearBlink"
-    //% weight=140 blockGap=3 color=#0000FF
+    //% weight=104 blockGap=3 color=#0000FF
     export function smgClearBlink(): void { 
         writeReg(BIT_SMG_ADD,REG_SMG_CLEAR_BLINK);
     }
     //%blockId=smgClearDisplay block="BIT-SMG ClearDisplay"
-    //% weight=140 blockGap=30 color=#0000FF
+    //% weight=103 blockGap=30 color=#0000FF
     export function smgClearDisplay(): void { 
         writeReg(BIT_SMG_ADD,REG_SMG_CLEAR_DISPLAY);    
     }

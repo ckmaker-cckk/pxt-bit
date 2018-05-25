@@ -242,7 +242,7 @@ namespace ikbit {
      *  from BIT-WSG get luminosity
      */
     //% blockId="ikbit_wsgGetLight" block="BIT-WSG get luminosity"
-    //% weight=150 blockGap=30 color=#00BFFF
+    //% weight=154 blockGap=30 color=#00BFFF
     export function wsgGetLight(): number {
         let light: number;
         pins.i2cWriteNumber(3, 0x32, NumberFormat.Int8LE);
