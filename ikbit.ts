@@ -2,7 +2,7 @@
 /**
  * IKBIT PACKAGES
  */
-//% weight=1000 color=#436EEE icon="\uf1cb"
+//% weight=1000 color=#436EEE icon="\uf1cb" block="Ckmaker-BIT"
 namespace ikbit {
 
     export function writeReg(add: number, reg: number) {

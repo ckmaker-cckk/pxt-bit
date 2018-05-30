@@ -1,7 +1,7 @@
 /**
  * IKBIT PACKAGES
  */
-//% weight=1000 color=#436EEE icon="\uf1cb"
+//% weight=1000 color=#436EEE icon="\uf1cb" block="Ckmaker-BIT"
 namespace ikbit { 
     const BIT_KEYBOARD_ADD = 0X05;
     const REG_KB_SHORT_RELEASE_BASE = 0X30;

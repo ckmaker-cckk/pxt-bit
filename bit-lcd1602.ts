@@ -1,7 +1,7 @@
 /**
  * IKBIT PACKAGES
  */
-//% weight=1000 color=#436EEE icon="\uf1cb"
+//% weight=1000 color=#436EEE icon="\uf1cb" block="Ckmaker-BIT"
 namespace ikbit {
     const BIT_LCD1602_ADD = 0X02;
 

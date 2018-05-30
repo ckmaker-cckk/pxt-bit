@@ -1,7 +1,7 @@
 /**
  * IKBIT PACKAGES
  */
-//% weight=1000 color=#436EEE icon="\uf1cb"
+//% weight=1000 color=#436EEE icon="\uf1cb" block="Ckmaker-BIT"
 namespace ikbit { 
     const BIT_YAOGAN_ADD = 0X06;
     const REG_YG_X = 0X30;
