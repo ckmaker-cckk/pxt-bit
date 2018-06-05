@@ -373,6 +373,7 @@ namespace bitLcd5110 {
     //% weight=133 blockGap=3 color=#0000CD
     export function lcd5110PrintNumber(value: number): void { 
         let str: string;
+        str = value.toString();
         lcd5110Print(str);
 
     }
@@ -380,6 +381,7 @@ namespace bitLcd5110 {
     //% weight=132 blockGap=3 color=#0000CD
     export function lcd5110PrintlnNumber(value: number): void { 
         let str: string;
+        str = value.toString();
         lcd5110Println(str);
 
     }
