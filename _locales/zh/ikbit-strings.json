@@ -61,5 +61,7 @@
 	"bitLcd5110.lcd5110SetCursor|block":"BIT-LCD5110 设置光标|x %x|y %y",
 	"bitLcd5110.lcd5110Print|block":"BIT-LCD5110 打印显示|%str",
 	"bitLcd5110.lcd5110Println|block":"BIT-LCD5110 带换行打印显示|%str",
+	"bitLcd5110.lcd5110PrintNumber|block":"BIT-LCD5110 打印数字|%value",
+	"bitLcd5110.lcd5110PrintlnNumber|block":"BIT-LCD5110 带换行打印数字|%value",
 	"bitLcd5110.lcd5110DrawChar|block":"BIT-LCD5110 字符显示|x %x|y %y|字符 %c|放大倍数 %size"
 }

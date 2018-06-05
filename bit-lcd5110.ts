@@ -369,8 +369,22 @@ namespace bitLcd5110 {
         ikbit.copyStrToBuf(str, tbuf, 0, size);
         ikbit.writeRegBuf(BIT_LCD5110_ADD,REG_5110_PRINTLN,tbuf);
     }
+    //%blockId=lcd5110PrintNumber block="BIT-LCD5110 PrintNumber|%value"
+    //% weight=133 blockGap=3 color=#0000CD
+    export function lcd5110PrintNumber(value: number): void { 
+        let str: string;
+        lcd5110Print(str);
+
+    }
+    //%blockId=lcd5110PrintlnNumber block="BIT-LCD5110 PrintlnNumber|%value"
+    //% weight=132 blockGap=3 color=#0000CD
+    export function lcd5110PrintlnNumber(value: number): void { 
+        let str: string;
+        lcd5110Println(str);
+
+    }
     //%blockId=lcd5110DrawChar block="BIT-LCD5110 DrawChar|x %x|y %y|c %c|size %size"
-    //% weight=132 blockGap=30 color=#0000CD
+    //% weight=131 blockGap=30 color=#0000CD
     export function lcd5110DrawChar(x: number, y: number, c: number, size: number): void { 
         let tbuf = pins.createBuffer(4);
         tbuf[0]=x;
